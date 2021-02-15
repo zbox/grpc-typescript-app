@@ -1,0 +1,45 @@
+{
+  "name": "grpc-typescript-app",
+  "description": "gRPC server and client example",
+  "version": "1.0.0",
+  "author": {
+    "name": "Alexander Zhukov",
+    "email": "zbox82@gmail.com"
+  },
+  "license": "MIT",
+  "tags": [
+    "grpc",
+    "typescript",
+    "nodejs"
+  ],
+  "keywords": [
+    "grpc",
+    "typescript",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zbox/grpc-typescript-app.git"
+  },
+  "scripts": {
+    "dev": "npx nodemon server.ts",
+    "build": "npx tsc --skipLibCheck",
+    "start": "node ./dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "google-protobuf": "^3.14.0",
+    "grpc": "^1.24.4"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/google-protobuf": "^3.7.4",
+    "@types/node": "^14.14.22",
+    "grpc_tools_node_protoc_ts": "^5.1.0",
+    "grpc-tools": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

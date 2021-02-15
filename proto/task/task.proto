@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package tasks;
+
+message IdObject {
+  int32 id = 1;
+}
+
+message TaskObject {
+  int32 id = 1;
+  string payload = 2;
+  EnumStatus status = 3;
+}
+
+enum EnumStatus {
+  PENDING = 0;
+  PROCESSED = 1;
+  ERROR = 2;
+}
+
+message StatusObject {
+  int32 id = 1;
+  EnumStatus status = 3;
+}
+
+message Result {
+  bool done = 1;
+  string meta = 2;
+}
+
+service Tasks {
+  // Get task by id
+  rpc getById (IdObject) returns (TaskObject) {};
+  // Get task`s statuses
+  rpc getStatuses (stream IdObject) returns (stream StatusObject) {}
+  // Create task
+  rpc createTask (TaskObject) returns (Result) {};
+  // Delete task by id
+  rpc deleteTask (IdObject) returns (Result) {};
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "payload": "Message 1 payload",
+    "status": 1
+  },
+  {
+    "id": 2,
+    "payload": "Message 2 payload",
+    "status": 0
+  },
+  {
+    "id": 3,
+    "payload": "Message 3 payload",
+    "status": 0
+  },
+  {
+    "id": 4,
+    "payload": "Message 4 payload",
+    "status": 2
+  },
+  {
+    "id": 5,
+    "payload": "Message 5 payload",
+    "status": 1
+  }
+]
